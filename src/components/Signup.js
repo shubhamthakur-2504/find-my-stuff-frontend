@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles/L.css';
 import { useNavigate } from 'react-router-dom';
 import { RemoveScrollBar } from 'react-remove-scroll-bar';
-import axios from 'axios';
+import api from '../api';
 export default function Signup() {
 
   const navigate = useNavigate();
@@ -35,11 +35,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response =  await axios.post('http://127.0.0.1:8000/api/user/register/',formData, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });      
+      const response =  await api.post('api/user/register/',formData);      
       if (response.status===201) {
         navigate('/login');
       } else {
