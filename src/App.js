@@ -15,8 +15,6 @@ import Identity_Cards_List from './Lists/Identity_Cards_List';
 import Others_Items_List from './Lists/Others_Items_List';
 import Wallets_List from './Lists/Wallets_List';
 import Toys_List from './Lists/Toys_List';
-import AboutUs from './pages/AboutUs';
-import ProfilePage from './pages/ProfilePage';
 import Frontpage from './pages/Frontpage';
 
 export default function App() {
@@ -48,8 +46,7 @@ export default function App() {
          <Route path="/founditem/Others-Items" element={ <ProtectedRoute> <Others_Items_List/> </ProtectedRoute> }/>  
         <Route path="/postitem" element={ <ProtectedRoute> <PostItems/> </ProtectedRoute> }/>  
         <Route path="/learnmore" element={<LearnMore />} /> 
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/profile" element={ <ProtectedRoute> <ProfilePage/>  </ProtectedRoute>} />
+        
 
 
         </Routes>
